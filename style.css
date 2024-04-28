@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.limitarsecao {
+    width: 1024px;
+}
+
+
+header {
+    height: 7vh;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+
+    & h1 {
+        color: #5724cd;
+        font-size: 24px;
+    }
+
+    & img {
+        width: 32px;
+    }
+}
+
+main {
+    background-color: #80808029;
+    
+    .formulario {
+        align-items: center;
+        display: flex;
+        width: 100%;
+        background-image:url("assets/imagens/bahia.jpg");
+        height: 95vh;
+    }
+
+    & .onlyform {
+        margin: 0px auto;
+    }
+
+    & .solicite {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         background-color: #5724cd;
+         color: white;
+         gap: 10px;
+         height: 5vh;
+
+        & img {
+            width: 20px;
+            rotate: -45deg;
+        }
+
+        & h2 {
+            font-size: 20px;
+        }
+    }
+
+    & form {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding: 30px 25px;
+
+        & legend {
+            font-size: 30px;
+            margin: 5px 0px 10px 0px;
+            font-weight: bold;
+        }
+
+        & label {
+            padding: 10px 0px;
+            font-size: 16px;
+        }
+
+        & input, select {
+            margin: 5px 0px;
+            padding: 0px 5px;
+            height: 32px;
+            flex-wrap: wrap;
+        }
+
+        & .formcampoduplo {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            & div {
+                width: 49%;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        & .radio {
+            margin: 15px 0;
+
+            & div {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                
+                & .sim, .nao {
+                    gap: 5px;
+                    padding-right: 50px;
+                }
+            }
+        }
+    
+        & .preferencias {
+
+            & div {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                padding-right: 50px;
+            }
+
+        }
+
+        & button {
+            width: 160px;
+            height: 32px;
+            border: none;
+            background-color: #5724cd;
+            color: white;
+            margin: 10px 0px;
+            font-size: 15px;
+        }
+
+
+    }
+
+
+    .ofertas, .lugares {
+        margin: 0px auto;
+
+        & h2 {
+            margin: 30px 0px;
+
+        }
+
+        & p {
+            margin: 20px 0;
+        }
+
+
+        & .ofertasimagens {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            height: 375px;
+        }
+
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        & .imagemdestaque {
+            position: relative;
+            height: 100%;
+            margin-right: 10px;
+        }
+
+        & .ofertaquatroimagens  {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-between;
+
+            & figure {
+                position: relative;
+                width: calc(50% - 10px);
+                height: calc(50% - 5px);
+                margin-left: 10px;
+            }
+
+        }
+
+        & figcaption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            color: white;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+        }
+
+    }
+
+
+    .imagenslugares {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        & figure {
+            width: calc(50% - 10px);
+            height: calc(50% - 10px);;
+        }
+
+        & div {
+            background-color: white;
+            padding: 5px 20px;
+            margin-bottom: 50px;
+
+            & h3 {
+                font-size: 17px;
+                margin-top: 10px;
+            }
+
+            & p {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+footer {
+    background-color: #5724cd;
+    color: white;
+
+    & .todasinfos {
+        margin: 0 auto;
+        padding: 30px 0px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    & .contatos div, .socialmedia div {
+        display: flex;
+        align-items: center;
+        margin: 10px 0px;
+        padding: 5px 0px;
+        gap: 5px;
+    }
+
+    & h3 {
+        margin-bottom: 20px;
+    }
+
+    & img {
+        width: 20px;
+    }
+}
+
+
+@media only screen and (max-width:980px) {
+    .limitarsecao {
+        width: 90%;
+    }
+    
+}
+
+
+
+@media only screen and (max-width:768px) {
+    .limitarsecao {
+        width: 95%;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0px;
+
+        img {
+            width: 20px;
+        }
+
+        h2 {
+            font-size: 13px;
+        }
+    }
+
+    main {
+
+        & .formulario {
+            background-color: white;
+            width: 100%;
+            height: auto;
+
+            & .solicite {
+                & img {
+                    width: 30px;
+                }
+            }
+
+            & .onlyform {
+                border: solid 0.1px  rgba(0, 0, 0, 0.247);
+                margin: 10px auto;
+
+                  & .preferencias div {
+                    padding: 5px 6px 5px 0px;
+                  }
+                }
+
+
+            }
+
+        & .ofertas {
+            height: 850px;
+        
+
+            & img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+
+            & .ofertasimagens {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+
+
+                & .imagemdestaque {
+                    border: solid white;
+                    width: 100%;
+                    margin: 0 auto;
+                }
+            
+
+                & .ofertaquatroimagens {
+                    width: 100%;
+                    margin: 0 auto;
+                
+                        & figure {
+                        border: solid white;
+                        width: calc(50% - 0px);
+                        height: calc(50% - 14px);
+                        padding: 0;
+                        margin: 7px 0px;
+                    }
+                }
+            }
+        }
+
+        .imagenslugares {
+
+
+            & div {
+                h3 {
+                    font-size: 14px;
+                }
+
+                p {
+                    font-size: 13px;
+                }
+            }
+        }
+    } 
+
+
+    footer {
+        width: 100%;
+        & h3 {
+            font-size: 15px;
+        }
+
+        & p {
+            font-size: 12px;
+        }
+
+        & img {
+            width: 14px;
+        }
+
+
+    }
+
+
+
+}
+
+
+
+
+
